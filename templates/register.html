@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+注册
+{% endblock %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/login_register.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/regist.js') }}" >
+	</script>
+{% endblock %}
+
+{% block main %}
+<h3 class="page-title">注册</h3>
+	<form action="" method="POST" class="register-class">
+		<div class="form-container">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="账号" name="tel" id="tel-tip">
+			</div>
+			<p style="display: none" id="tel-tip"><span>账号为空，请重新填写</span></p>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="用户名" name="username" id="username-tip">
+			</div>
+			<p style="display: none" id="username-tip"><span>用户名为空，请重新填写</span></p>
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="密码" name="pwd1" id="p1">
+			</div>
+			<p style="display: none" id="p1"><span>密码为空，请重新填写</span></p>
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="确认密码" name="pwd2" id="p2">
+			</div>
+			<p style="display: none" id="p2"><span>密码为空，请重新填写</span></p>
+			<p style="display: none" id="password-tip"><span>两次输入密码不同，请重新填写！</span></p>
+			<div class="form-group">
+				<button class="btn btn-primary btn-block">注册</button>
+			</div>
+		</div>
+	</form>
+{% endblock %}
